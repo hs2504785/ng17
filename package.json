@@ -4,12 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && npm run uncss",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:ng17": "node dist/ng17/server/server.mjs",
     "sme-build": "ng build --source-map",
-    "sme": "npm run sme-build && source-map-explorer dist/**/*.js --no-border-checks"
+    "sme": "npm run sme-build && source-map-explorer dist/**/*.js --no-border-checks",
+    "uncss": "node tools/scripts/uncss.js",
+    "purgecss": "purgecss --config tools/scripts/purgecss.config.js"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +27,7 @@
     "@angular/ssr": "^17.0.5",
     "bootstrap": "^5.3.2",
     "express": "^4.18.2",
+    "purgecss": "^5.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
