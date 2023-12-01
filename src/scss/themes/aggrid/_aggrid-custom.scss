@@ -1,0 +1,60 @@
+@import '../../abstracts/variables';
+
+.ag-theme-alpine {
+  .ag-root-wrapper {
+    border: none;
+  }
+
+  .ag-header-row {
+    font-size: 0.75rem;
+  }
+
+  .ag-cell {
+    &.strong {
+      font-weight: 500;
+      color: $gray-900;
+    }
+
+    &.multi-line {
+      line-height: 20px;
+      display: flex;
+      align-items: center;
+
+      .multi-line--inner {
+        // height: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+
+  .ag-header-cell-resize {
+    display: none;
+  }
+
+  .grid-more {
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    background: $white;
+  }
+
+  .ag-row:hover {
+    .grid-more {
+      opacity: 1;
+    }
+  }
+
+  .kr-dropdown.show {
+    .grid-more {
+      opacity: 1;
+    }
+  }
+}

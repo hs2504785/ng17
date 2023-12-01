@@ -1,0 +1,51 @@
+@import 'abstracts/variables';
+
+%ui-search {
+  position: relative;
+
+  .form-control {
+    padding-right: 30px;
+
+    &:hover + .ui-search-cancel {
+      opacity: 1;
+    }
+  }
+
+  .icon-search {
+    position: absolute;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .btn-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transition: opacity 0.2s;
+  }
+}
+
+.ui-search {
+  @extend %ui-search;
+
+  .form-control {
+    padding-left: 2.6rem;
+  }
+
+  .icon-search {
+    left: 0.88rem;
+  }
+}
+
+.ui-search-alt {
+  @extend %ui-search;
+
+  .icon-search {
+    right: 0.88rem;
+  }
+
+  // .form-control {
+  //   padding-left: 45px;
+  // }
+}

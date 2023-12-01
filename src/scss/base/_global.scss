@@ -1,0 +1,105 @@
+@import '../abstracts/variables';
+
+html,
+body {
+  height: 100%;
+}
+
+.disabled,
+[disabled] {
+  pointer-events: none;
+}
+
+.kr-title {
+  line-height: 1.5rem;
+  margin-bottom: 0;
+}
+
+.kr-subtitle {
+  color: $gray-500;
+}
+
+.offcanvas-title {
+  font-size: $font-size-base;
+  font-weight: bold;
+}
+
+// Custom Checkbox
+.form-check-input {
+  width: 16px;
+  height: 16px;
+}
+
+.form-check-input[type='checkbox'] {
+  &:focus,
+  &:checked {
+    box-shadow: none;
+  }
+
+  &:checked {
+    text-align: center;
+    background-size: 11px;
+  }
+}
+
+// custom radio
+.form-check-input[type='radio'] {
+  &:checked {
+    box-shadow: inset 0 0 0 3px #fff;
+  }
+
+  &:active {
+    filter: none;
+  }
+}
+
+/*** Sub Header & Modal Header ****/
+
+// close icon
+
+.upload .toast-body {
+  padding-top: 10px;
+}
+
+label.required::after {
+  content: '*';
+  color: $danger;
+  margin-left: 4px;
+  display: inline-block;
+}
+
+// Nav
+.nav-pills .nav-link {
+  --bs-nav-link-padding-x: 0.88rem;
+  --bs-nav-link-padding-y: 0.62rem;
+  color: $gray-500;
+  font-weight: 500;
+}
+
+.kr-nav {
+  border-bottom: 1px solid #e4e5e7;
+
+  .active {
+    border-bottom: 2px solid #0d6efd;
+  }
+}
+
+// cursor
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// Alert
+.alert-warning {
+  color: $yellow-600;
+  font-weight: 400;
+
+  .icon path {
+    stroke: $yellow;
+  }
+}
+
+.alert-warning .alert-heading {
+  color: $yellow-700;
+  font-weight: 500;
+}

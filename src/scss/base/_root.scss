@@ -1,0 +1,5 @@
+@import '../abstracts/variables';
+:root {
+  --bs-warning-bg-subtle: #{$yellow-25};
+  --bs-warning-border-subtle: #{$yellow-300};
+}
