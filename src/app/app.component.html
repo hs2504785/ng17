@@ -1,2 +1,10 @@
 <h1 class="text-center">HELLo</h1>
 ICON <i class="ti-user"></i>
+
+<ul class="list-group">
+  @for (user of users; track user.name; let count = $count) {
+  <li class="list-group-item">{{ count }}: {{ user.name }} - {{ user.age }}</li>
+  } @empty {
+  <li>No records</li>
+  }
+</ul>
