@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build && npm run uncss",
+    "build:ghpages": "ng build --base-href /ng17/ && npm run uncss",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:ng17": "node dist/ng17/server/server.mjs",
